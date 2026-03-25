@@ -22,5 +22,5 @@
     path: "2026-03-25-i-would-like-to-start-another-blog/",
     title: [I would like to start another blog],
     date: datetime(year: 2026, month: 3, day: 25),
-    read-time: 5,
+    read-time: 1,
   )
