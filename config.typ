@@ -5,8 +5,8 @@
   header-links: (
     "/": "Home",
     "/blog/": "Blog",
-    "https://johanvx.fyi/bilibili": sicon(slug: "bilibili"),
-    "https://johanvx.fyi/github": sicon(
+    "/bilibili": sicon(slug: "bilibili"),
+    "/github": sicon(
       slug: "github",
       icon-color: "#888888",
     ),
@@ -21,3 +21,9 @@
 ) = tufted.full-width({
   date.display(date-display) + " · " + str(read-time) + " min. read"
 })
+
+#let meta-redirect(second: int, to: str) = html.elem("meta", attrs: (
+  http-equiv: "refresh",
+  content: str(second) + "; url=" + to,
+))
+
