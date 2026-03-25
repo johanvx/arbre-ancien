@@ -4,9 +4,9 @@
 
 #let to = "https://github.com/johanvx"
 
-#meta-redirect(second: 5, to: to)
+#meta-redirect(second: 3, to: to)
 
 = GitHub
 
-You'll be redirected to johanvx's GitHub profile page soon. If the redirection
-doesn't work, click #link(to)[here].
+You'll be redirected to johanvx's GitHub profile page in 3 seconds. If the
+redirection doesn't work, click #link(to)[here].
