@@ -1,13 +1,26 @@
-#import "../index.typ": template, tufted
-#show: template.with(title: "Blog")
+#import "../index.typ": info-above-title, template, tufted
+
+#let blog-post-item(
+  path: str,
+  title: content,
+  date: datetime,
+  read-time: int,
+  date-display: "[year]-[month]-[day]",
+) = {
+  [#link(path)[#title] #tufted.margin-note({
+      date.display(date-display) + " · " + str(read-time) + " min. read"
+    })]
+}
+
+#show: template.with(title: "Blog :: Johan Xie")
 
 = Blog
 
-== 2025
+== 2026
 
-- #link("2025-10-30-normal-distribution/")[Normal Distribution]
-- #link("2025-04-16-monkeys-apes/")[Monkeys vs Apes]
-
-== 2024
-
-- #link("2024-10-04-iterators-generators/")[Iterators vs Generators in Python]
+- #blog-post-item(
+    path: "2026-03-25-i-would-like-to-start-another-blog/",
+    title: [I would like to start another blog],
+    date: datetime(year: 2026, month: 3, day: 25),
+    read-time: 5,
+  )
