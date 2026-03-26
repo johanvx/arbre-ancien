@@ -1,6 +1,8 @@
-#import "../config.typ": info-above-title, template, tufted
+#import "../config.typ": info-above-title, template, tufted, page-source
 #import "@preview/cmarker:0.1.8"
 #show: template
+
+#page-source
 
 = Johan
 

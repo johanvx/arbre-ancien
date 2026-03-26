@@ -11,9 +11,9 @@ html: $(HTML_FILES) assets
 # $< is the first prerequisite (the .typ file)
 # $@ is the target (the .html file)
 # $(@D) is the directory part of the target
-_site/%.html: content/%.typ config.typ
+_site/%.html: content/%.typ config.typ Makefile
 	@mkdir -p $(@D)
-	typst compile --root .. --features html --format html $< $@
+	typst compile --root .. --features html --format html --input path=$*.typ $< $@
 
 _site/index.html: README.md
 

@@ -27,3 +27,11 @@
   content: str(second) + "; url=" + to,
 ))
 
+#let page-source = {
+  if "path" in sys.inputs {
+    let prefix = "https://github.com/johanvx/arbre-ancien/blob/main/content/"
+    tufted.margin-note(
+      link(prefix + sys.inputs.path)[(_page source_)],
+    )
+  }
+}

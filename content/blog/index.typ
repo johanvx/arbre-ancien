@@ -1,4 +1,4 @@
-#import "../index.typ": info-above-title, template, tufted
+#import "../index.typ": info-above-title, template, tufted, page-source
 
 #let blog-post-item(
   path: str,
@@ -13,6 +13,8 @@
 }
 
 #show: template.with(title: "Blog :: Johan Xie")
+
+#page-source
 
 = Blog
 
