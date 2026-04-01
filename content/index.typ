@@ -1,4 +1,4 @@
-#import "../config.typ": info-above-title, template, tufted, page-source
+#import "../config.typ": page-source, template, tufted
 #import "@preview/cmarker:0.1.8"
 #show: template
 

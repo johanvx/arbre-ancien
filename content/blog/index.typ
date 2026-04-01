@@ -1,4 +1,12 @@
-#import "../index.typ": info-above-title, template, tufted, page-source
+#import "../index.typ": page-source, template, tufted
+
+#let blog-post-info(
+  date: datetime,
+  read-time: int,
+  date-display: "[year]-[month]-[day]",
+) = tufted.full-width({
+  date.display(date-display) + " · " + str(read-time) + " min. read"
+})
 
 #let blog-post-item(
   path: str,

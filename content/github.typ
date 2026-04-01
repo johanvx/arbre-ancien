@@ -1,4 +1,4 @@
-#import "../config.typ": info-above-title, meta-redirect, template, tufted
+#import "../config.typ": meta-redirect, template, tufted
 #import "@preview/cmarker:0.1.8"
 #show: template
 

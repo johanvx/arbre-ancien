@@ -14,14 +14,6 @@
   title: "Johan Xie",
 )
 
-#let info-above-title(
-  date: datetime,
-  read-time: int,
-  date-display: "[year]-[month]-[day]",
-) = tufted.full-width({
-  date.display(date-display) + " · " + str(read-time) + " min. read"
-})
-
 #let meta-redirect(second: int, to: str) = html.elem("meta", attrs: (
   http-equiv: "refresh",
   content: str(second) + "; url=" + to,

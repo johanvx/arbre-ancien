@@ -1,8 +1,8 @@
-#import "../index.typ": info-above-title, template, tufted, page-source
+#import "../index.typ": blog-post-info, page-source, template, tufted
 #import "@preview/cmarker:0.1.8"
 #show: template.with(title: "I would like to start another blog :: Johan Xie")
 
-#info-above-title(
+#blog-post-info(
   date: datetime(year: 2026, month: 3, day: 25),
   read-time: 1,
 )
