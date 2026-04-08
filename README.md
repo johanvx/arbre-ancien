@@ -1,6 +1,6 @@
-# Johan
+# Arbre ancien
 
-Hi! I write [blog posts] occasionally.
+Hi! I'm Johan. I write [blog posts] occasionally.
 
 ## About this website
 

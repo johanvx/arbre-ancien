@@ -4,7 +4,7 @@
 
 #page-source
 
-= Johan
+= Arbre ancien
 
 // NOTE: This page is generated from the README.md file
 #{
