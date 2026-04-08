@@ -5,6 +5,7 @@
   header-links: (
     "/": "Home",
     "/blog/": "Blog",
+    "/notes/": "Notes",
     "/bilibili": sicon(slug: "bilibili"),
     "/github": sicon(
       slug: "github",
