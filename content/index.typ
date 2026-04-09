@@ -1,10 +1,8 @@
-#import "../config.typ": page-source, template, tufted
+#import "../config.typ": template, tufted
 #import "@preview/cmarker:0.1.8"
 #show: template
 
-#page-source
-
-= Arbre ancien
+#title[Arbre ancien]
 
 // NOTE: This page is generated from the README.md file
 #{
@@ -14,6 +12,7 @@
   // Render markdown content with custom image handling
   cmarker.render(
     md-content,
+    h1-level: 0,
     scope: (
       image: (source, alt: none, format: auto) => figure(image(
         "../" + source, // Modify paths for images

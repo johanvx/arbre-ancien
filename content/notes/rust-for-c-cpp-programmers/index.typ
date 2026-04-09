@@ -1,5 +1,5 @@
 #import "../index.typ": (
-  notes-info, notes-item, notes-side-info, page-source, template, tufted,
+  notes-info, notes-item, notes-side-info, template, tufted,
 )
 #import "@preview/cmarker:0.1.8"
 #show: template.with(title: "Rust for C/C++ Programmers :: Johan Xie")
@@ -7,9 +7,7 @@
 #let this-book-url = "https://microsoft.github.io/RustTraining/c-cpp-book/"
 #let this-book-link(path, body) = link(this-book-url + path)[#body]
 
-#page-source
-
-= Rust for C/C++ Programmers
+#title[Rust for C/C++ Programmers]
 
 This is an #link("https://microsoft.github.io/RustTraining/c-cpp-book/")[online
   book by Microsoft] to enable C/C++ programmers self-study Rust in a few days.

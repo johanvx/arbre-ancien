@@ -1,4 +1,4 @@
-#import "../index.typ": page-source, template, tufted
+#import "../index.typ": template, tufted
 
 #let blog-post-info(
   date: datetime,
@@ -22,11 +22,9 @@
 
 #show: template.with(title: "Blog :: Johan Xie")
 
-#page-source
+#title[Blog]
 
-= Blog
-
-== 2026
+= 2026
 
 - #blog-post-item(
     path: "2026-04-01-why-i-start-taking-notes/",

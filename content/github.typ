@@ -6,7 +6,7 @@
 
 #meta-redirect(second: 3, to: to)
 
-= GitHub
+#title[GitHub]
 
 You'll be redirected to johanvx's GitHub profile page in 3 seconds. If the
 redirection doesn't work, click #link(to)[here].

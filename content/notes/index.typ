@@ -1,4 +1,4 @@
-#import "../index.typ": page-source, template, tufted
+#import "../index.typ": template, tufted
 
 #let notes-info(
   series: content,
@@ -35,11 +35,9 @@
 
 #show: template.with(title: "Notes :: Johan Xie")
 
-#page-source
+#title[Notes]
 
-= Notes
-
-== Microsoft Rust Training Series
+= Microsoft Rust Training Series
 
 - #notes-item(
     path: "rust-for-c-cpp-programmers/",

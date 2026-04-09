@@ -1,4 +1,4 @@
-#import "../index.typ": blog-post-info, page-source, template, tufted
+#import "../index.typ": blog-post-info, template, tufted
 #import "@preview/cmarker:0.1.8"
 #show: template.with(title: "Why I start taking notes :: Johan Xie")
 #set quote(block: true)
@@ -9,9 +9,7 @@
   read-time: 1,
 )
 
-#page-source
-
-= Why I start taking notes
+#title[Why I start taking notes]
 
 Taking notes has always been useless for me because I always felt like I'd never
 actually look back at the notes I took.

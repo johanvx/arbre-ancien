@@ -6,7 +6,7 @@
 
 #meta-redirect(second: 3, to: to)
 
-= Bilibili
+#title[Bilibili]
 
 You'll be redirected to johanvx's Bilibili home page in 3 seconds. If the
 redirection doesn't work, click #link(to)[here].
