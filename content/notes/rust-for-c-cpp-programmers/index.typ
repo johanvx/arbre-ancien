@@ -49,12 +49,12 @@ What is a crate?
     Language]:
 
   #quote[
-    A _crate_ is the smallest amount of code that the Rust compiler considers
-    at a time. ... Crates can contain modules...
+    A _crate_ is the smallest amount of code that the Rust compiler considers at
+    a time. ... Crates can contain modules...
 
     A crate can come in one of two forms: a binary crate or a library crate.
 
-    A _packcage_ is a bundle of one or more crates that provides a set of
+    A _package_ is a bundle of one or more crates that provides a set of
     functionality. A package contains a _Cargo.toml_ file that describes how to
     build those crates.
 
@@ -63,8 +63,8 @@ What is a crate?
   ]
 
 - Commonly, a repository (like a GitHub repository) can contain multiple
-  packages at a time. Each directory under the repository root contains
-  a _Cargo.toml_ file.
+  packages at a time. Each directory under the repository root contains a
+  _Cargo.toml_ file.
 
 *Chapter 3: Built-in Types*
 
@@ -142,8 +142,8 @@ Tuples have a fixed size.
 References: 1 mutable or (this is an exclusive or) multiple immutables;
 references cannot outlive the variable scope (so no dangling pointer issue).
 
-Slices are used to create subsets of arrays (a bit like `string_view` but in
-a more general sense). Internally, slices are implemented as _fat pointers_ that
+Slices are used to create subsets of arrays (a bit like `string_view` but in a
+more general sense). Internally, slices are implemented as _fat pointers_ that
 contains the length of the slice and a pointer to the starting element in the
 original array. To mimic that in C:
 
@@ -164,7 +164,7 @@ of the program.
 
 - `String` is a heap-allocated, growable string (like in C `malloc`ed `char *`
   buffer, or in C++ `std::string`).
-- `&str` is a immutably borrowed reference (like a custom string view in C with
+- `&str` is an immutably borrowed reference (like a custom string view in C with
   `const char *`, or a `string_view` in C++ but with lifetime check, so
   guaranteed to be valid and never dangle).
 
@@ -292,7 +292,7 @@ Rust enums are discriminated unions (tagged unions done right).
 
 `match` statement must be exhaustive. The `_` can be used a wildcard for the
 _all else_ case (just like using `default` in C to catch the rest of the cases).
-all `match` arms (`=>`) should return a value of the same type for `match`
+All `match` arms (`=>`) should return a value of the same type for `match`
 yielding a value.
 
 The `matches!` macro can be used to match to specific variant of `enum`.
@@ -423,7 +423,7 @@ How does Rust make RAII *foolproof*?
   variable
 - No Rule of Five
 - Enforces safety at compile time for memory allocation, through a combination
-  of mechanics including ownership, borrowing, mutability and lifetimes
+  of mechanics including ownership, borrowing, mutability, and lifetimes
 - Runtime allocations can happen both on the stack and the heap
 
 Passing parameters:
@@ -435,9 +435,10 @@ Passing parameters:
 Move semantics: by default, assignment transfers ownership (no move assignment
 operator, no move constructor). Borrow after move is illegal.
 
-The `clone()` method can be used to copy the original memory with a separate heap allocation.
+The `clone()` method can be used to copy the original memory with a separate
+heap allocation.
 
-`Copy` trait allows to duplicate the value when moved. It doesn't guarantee the
+`Copy` trait allows duplicating the value when moved. It doesn't guarantee the
 `Copy` type to be stack-allocated, which means it can still be heap-allocated
 (e.g., via `Box<T>` pointers), and a non-`Copy` type can be stack-allocated
 (e.g., a custom struct `struct Point(u32,u32)`.
@@ -479,7 +480,7 @@ Unlike C++'s destructor method, `drop()` isn't called when moving objects:
   }
   ```
 
-- While in Rust, desructor only calls when the resource is end of scope
+- While in Rust, destructor only calls when the resource is end of scope
 
   ```rust
   struct Point {
@@ -692,8 +693,8 @@ is
 `Cell<T>` and `RefCell<T>` are used for interior mutability. They are usually
 used in such a situation:
 
-For the type `T`, it's desirable to keep most of it read-only while allowing to
-write to a few fields.
+For the type `T`, it's desirable to keep most of it read-only while allowing
+writing to a few fields.
 
 - `Cell<T>` is used for `Copy` types, requires `T: Copy` for `.get()`
 - `RefCell<T>` enforces borrow-checks at *runtime* in lieu of compile-time,
@@ -945,9 +946,9 @@ binaries.
 - Take a look at the generated Cargo.toml in `hello` and `hellolib`. Notice that
   both of them have been to the upper level `Cargo.toml`
 
-- The presence of `lib.rs` in `hellolib` implies a library package (see
-  #link("https://doc.rust-lang.org/cargo/reference/cargo-targets.html") for
-  customization options)
+- The presence of `lib.rs` in `hellolib` implies a library package (see #link(
+    "https://doc.rust-lang.org/cargo/reference/cargo-targets.html",
+  ) for customization options)
 
 - Adding a dependency on `hellolib` in `Cargo.toml` for `hello`
 
@@ -1232,7 +1233,7 @@ More on snapshot testing:
 `Option` and `Result` are `enum`s defined in the standard library, so pattern
 matching with `match` over `enum` works directly with them.
 
-`Option` allows to separate valid values and invalid values.
+`Option` allows separating valid values and invalid values.
 
 #let unwrap-or-link(body) = this-book-link(
   "ch17-2-avoiding-unchecked-indexing.html#safe-value-extraction-with-unwrap_or",
@@ -1242,9 +1243,9 @@ matching with `match` over `enum` works directly with them.
   "ch17-2-avoiding-unchecked-indexing.html#functional-transforms-map-map_err-find_map",
   body,
 )
-*Production patterns*: See #unwrap-or-link[Safe value extraction with unwrap\_or]
-and #map-err-link[Functional transforms: map, map\_err, find\_map] for
-real-world examples from production Rust code.
+*Production patterns*: See #unwrap-or-link[Safe value extraction with
+  unwrap\_or] and #map-err-link[Functional transforms: map, map\_err, find\_map]
+for real-world examples from production Rust code.
 
 *Rule of thumb*: Use `Option` when absence is normal (e.g., looking up a key).
 Use `Result` when failure needs explanation (e.g., file I/O, parsing).
@@ -1372,9 +1373,9 @@ fn read_config(path: &str) -> Result<String, ConfigError> {
 *Crate-Level Error Types and Result Aliases*
 
 In real-world Rust projects, every crate (or significant module) defines its own
-`Error` enum and a `Result` type alias. This is the idiomatic pattern
-— analogous to how in C++ you’d define a per-library exception hierarchy and
-using `Result = std::expected<T, Error>`.
+`Error` enum and a `Result` type alias. This is the idiomatic pattern —
+analogous to how in C++ you’d define a per-library exception hierarchy and using
+`Result = std::expected<T, Error>`.
 
 ```rust
 // src/error.rs  (or at the top of lib.rs)
@@ -1436,7 +1437,8 @@ match result {
 }
 ```
 
-#tufted.margin-note[*Checkpoint*: You can create a multi-file project that propagates errors with `?`]
+#tufted.margin-note[*Checkpoint*: You can create a multi-file project that
+  propagates errors with `?`]
 
 *Checkpoint callback*
 
@@ -1549,7 +1551,7 @@ pub fn read_temperature_from_stdin() -> Result<Temperature> {
 Rust use `Trait`s to implement interfaces, abstract base classes and operator
 overloading.
 
-If traditional C++ inheritance signifies a _is-a_ relation, Rust's traits imply
+If traditional C++ inheritance signifies an _is-a_ relation, Rust's traits imply
 a _can-do_ behaviour.
 
 In Rust, operators map to `std::ops` traits, e.g. `std::ops:Add` for `+`,
@@ -1682,10 +1684,8 @@ fn main() {
 }
 ```
 
-Trait impl (`impl Trait`) can be used with traits
-
-- to accept any type that implements a trait
-- in a return value.
+Trait impl (`impl Trait`) can be used with traits to accept any type that
+implements a trait, or in a return value.
 
 Dynamic traits (`dyn Trait`) can be used to invoke the trait functionality
 without knowing the underlying type. This is known as `type erasure`.
@@ -1726,7 +1726,7 @@ type at compile time. Use `enum` when you own all the variants.
 Generics are used to reuse the same algorithm or data structure across data
 types.
 
-*Exercise: Generies*
+*Exercise: Generics*
 
 - Modify the `Point` type to use two different types (`T` and `U`) for x and y
 
@@ -1851,9 +1851,9 @@ fn main() {
 
 Generics can be used to enforce state machine transitions *at compile time*:
 
-Consider a `Drone` with say two states: `Idle` and `Flying`. In the `Idle` state,
-the only permitted method is `takeoff()`. In the `Flying` state, we permit
-`land()`.
+Consider a `Drone` with say two states: `Idle` and `Flying`. In the `Idle`
+state, the only permitted method is `takeoff()`. In the `Flying` state, we
+permit `land()`.
 
 One approach is to model the state machine with `enum`, like the following:
 
@@ -1921,8 +1921,8 @@ fn main() {
 
 This requires many runtime checks.
 
-For a zero cost abstraction solution, let's use generics and `PhantomData<T>`,
-a zero-sized marker data type. This allows the compiler to enforce the state
+For a zero cost abstraction solution, let's use generics and `PhantomData<T>`, a
+zero-sized marker data type. This allows the compiler to enforce the state
 machine at compile time. A possible implementation is like the following:
 
 ```rust
@@ -2113,8 +2113,8 @@ iterator chain* that:
 3. Formats each as `"{name}: {temp}°C [ALARM]"`
 4. Collects into `Vec<String>`
 
-Hint: you’ll need `.collect()` before `.sort_by()`, since sorting requires
-a `Vec`.
+Hint: you’ll need `.collect()` before `.sort_by()`, since sorting requires a
+`Vec`.
 
 *Answer*:
 
@@ -2282,8 +2282,8 @@ fn debugln_twice<T: Debug>(data: T) {
 *Chapter 13: Concurrency*
 
 Rust prevents data races at compile time through `Send` and `Sync` marker
-traits. For example, in C++, sharing a `std::vector` across threads without
-a mutex is a UB but compiles fine; While in Rust, it won't compile.
+traits. For example, in C++, sharing a `std::vector` across threads without a
+mutex is a UB but compiles fine; While in Rust, it won't compile.
 
 ```cpp
 // This is good: lock before accessing.
@@ -2379,10 +2379,10 @@ fn good() {
 // }
 ```
 
-`thread::scope()` can be used when it's necessary to borrow from the environment,
-as `thread::scope` waits until the internal thread returns (or in another way to
-think about it, `thread::scope` guarantees all spawned threads are joined before
-the scope function returns).
+`thread::scope()` can be used when it's necessary to borrow from the
+environment, as `thread::scope` waits until the internal thread returns (or in
+another way to think about it, `thread::scope` guarantees all spawned threads
+are joined before the scope function returns).
 
 Use `move` to transfer ownership to the thread.
 
@@ -2390,7 +2390,7 @@ Use `move` to transfer ownership to the thread.
 - Read and write case:
   - `Arc<Mutex<T>>` is used when the frequency of read and write is similar or
     the critical sections are short. (C++: `std::mutex`)
-  - `Arc<RwLock<T>>` is used when read is far more frequent than write. Use
+  - `Arc<RwLock<T>>` is used when read is far frequenter than write. Use
     `.read()` and `.write()`. (C++: `std::shared_mutex`)
 
 If a thread panics while holding a `Mutex` or `RwLock`, the lock becomes
@@ -2401,16 +2401,16 @@ by the panicking thread. Use `.into_inner()` to recover.
 equivalent to C++ `std::atomic<T>` with same memory ordering model from `std::
 sync::atomic::Ordering` (`Relaxed`, `Acquire`, `Release`, `SeqCst`) .
 
-*But what do theses memory orderings mean? I have zero knowledge.* See
-#link("https://doc.rust-lang.org/nomicon/atomics.html")[Atomics - The
-  Rustonomicon].
+*But what do these memory orderings mean? I have zero knowledge.* See #link(
+  "https://doc.rust-lang.org/nomicon/atomics.html",
+)[Atomics - The Rustonomicon].
 
 Use condition variable `Condvar` (equivalent to C++ `std::condition_variable`)
 to let a thread sleep until another thread signals that a condition has changed.
 
 - Always paired with a `Mutex`: lock, check, wait if not ready, and act when
   ready.
-- Always re-check the condition in a loop, or use `wait_while`/`wait_until` to
+- Always recheck the condition in a loop, or use `wait_while`/`wait_until` to
   handle spurious wakeups.
 
 ```rust
@@ -2445,14 +2445,14 @@ fn main() {
 }
 ```
 
-Channels are used to exchange messages between `Sender` and `Receiver`, with
-a _multi-producer, single consumer_ paradigm `mpsc`. Both `send()` and `recv()`
+Channels are used to exchange messages between `Sender` and `Receiver`, with a
+_multi-producer, single consumer_ paradigm `mpsc`. Both `send()` and `recv()`
 can block the thread.
 
 `Send` and `Sync` marker traits are used to enforce thread safety at compile
 time:
 
-- `Send`: it can be safely given (ownership transferred) to another threa.
+- `Send`: it can be safely given (ownership transferred) to another thread.
 - `Sync`: it can be safely shared (read-only reference `&T`) with other threads.
 
 Notes:
@@ -2476,8 +2476,7 @@ Notes:
   words in that line
 - Use `Arc<Mutex<HashMap<String, usize>>>` to collect results
 - Print the total word count across all lines
-- *Bonus*: Try implementing this with channels (`mpsc`) instead of shared
-  state
+- *Bonus*: Try implementing this with channels (`mpsc`) instead of shared state
 
 *Answer*:
 
@@ -2569,14 +2568,14 @@ fn use_mpsc_channel(data: &Vec<String>) {
 
 *Chapter 14: Unsafe Rust and FFI*
 
-`unsafe` allows to do what are normally disallowed by the Rust compiler, e.g.
-dereferencing raw pointers, accessing _mutable_ static variables (see
-#link("https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html")). Programmers
-should take responsibility for what the compiler normally guarantees, e.g. no
-dangling pointers, no invalid references, keep `unsafe` scope as small as
-possible, and write a `SAFETY` comment explaining why/how the `unsafe` scope is
-safe with which assumptions. Callers of `unsafe` code should also have comments
-on safety.
+`unsafe` allows doing what are normally disallowed by the Rust compiler, e.g.
+dereferencing raw pointers, accessing _mutable_ static variables (see #link(
+  "https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html",
+)). Programmers should take responsibility for what the compiler normally
+guarantees, e.g. no dangling pointers, no invalid references, keep `unsafe`
+scope as small as possible, and write a `SAFETY` comment explaining why/how the
+`unsafe` scope is safe with which assumptions. Callers of `unsafe` code should
+also have comments on safety.
 
 Always test `unsafe` code for verifying correctness. If still in doubt, consult
 experts for advice.
@@ -2596,7 +2595,7 @@ pub extern "C" fn add(left: u64, right: u64) -> u64 {
 
 `cbindgen` is a great tool used to generate header files for exported Rust
 functions. Functions and structures can be exported using `#[no_mangle]` and
-`#[repr(C)]`. Note that if we want only a opaque pointer `*mut T` in C,
+`#[repr(C)]`. Note that if we want only an opaque pointer `*mut T` in C,
 `#[repr(C)]` is not needed.
 
 See #link("https://doc.rust-lang.org/nomicon/intro.html")[Introduction - The
@@ -2624,8 +2623,8 @@ cargo careful test
 *Exercise: Writing a safe FFI wrapper*
 
 - Write a safe Rust wrapper around an `unsafe` FFI-style function. The exercise
-  simulates calling a C function that writes a formatted string into
-  a caller-provided buffer.
+  simulates calling a C function that writes a formatted string into a
+  caller-provided buffer.
 - *Step 1*: Implement the unsafe function `unsafe_greet` that writes a greeting
   into a raw `*mut u8` buffer
 - *Step 2*: Write a safe wrapper `safe_greet` that allocates a `Vec<u8>`, calls

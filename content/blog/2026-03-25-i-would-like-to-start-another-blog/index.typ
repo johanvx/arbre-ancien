@@ -1,13 +1,13 @@
 #import "../index.typ": blog-post-info, template, tufted
 #import "@preview/cmarker:0.1.8"
-#show: template.with(title: "I would like to start another blog :: Johan Xie")
+#show: template.with(title: "I Would like to Start Another Blog :: Johan Xie")
 
 #blog-post-info(
   date: datetime(year: 2026, month: 3, day: 25),
   read-time: 1,
 )
 
-#title[I would like to start another blog]
+#title[I Would like to Start Another Blog]
 
 #tufted.margin-note[
   This post was written before I set up my new blog site.

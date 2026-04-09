@@ -1,6 +1,6 @@
 #import "../index.typ": blog-post-info, template, tufted
 #import "@preview/cmarker:0.1.8"
-#show: template.with(title: "Why I start taking notes :: Johan Xie")
+#show: template.with(title: "Why I Start Taking Notes :: Johan Xie")
 #set quote(block: true)
 #set par(justify: true)
 
@@ -9,14 +9,16 @@
   read-time: 1,
 )
 
-#title[Why I start taking notes]
+
+#title[Why I Start Taking Notes]
 
 Taking notes has always been useless for me because I always felt like I'd never
 actually look back at the notes I took.
 
 #let takuya-matsuyama = footnote[
-  He's a solo developer, the author of a Markdown note-taking app called
-  #link("https://www.inkdrop.app/")[_Inkdrop_].
+  He's a solo developer, the author of a Markdown note-taking app called #link(
+    "https://www.inkdrop.app/",
+  )[_Inkdrop_].
 ]
 
 #let videos = footnote[

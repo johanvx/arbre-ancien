@@ -6,7 +6,9 @@
   updated-date: datetime,
   date-display: "[year]-[month]-[day]",
 ) = tufted.full-width([
-  #series · #created-date.display(date-display) - #updated-date.display(date-display)
+  #series · #created-date.display(date-display) - #updated-date.display(
+    date-display,
+  )
 ])
 
 #let notes-side-info(

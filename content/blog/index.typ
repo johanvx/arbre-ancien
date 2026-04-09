@@ -28,14 +28,14 @@
 
 - #blog-post-item(
     path: "2026-04-01-why-i-start-taking-notes/",
-    title: [Why I start taking notes],
+    title: [Why I Start Taking Notes],
     date: datetime(year: 2026, month: 4, day: 1),
     read-time: 1,
   )
 
 - #blog-post-item(
     path: "2026-03-25-i-would-like-to-start-another-blog/",
-    title: [I would like to start another blog],
+    title: [I Would like to Start Another Blog],
     date: datetime(year: 2026, month: 3, day: 25),
     read-time: 1,
   )
