@@ -27,6 +27,13 @@
 = 2026
 
 - #blog-post-item(
+    path: "2026-04-10-i-tried-making-a-document-accessible/",
+    title: [I Tried Making a Document Accessible],
+    date: datetime(year: 2026, month: 4, day: 10),
+    read-time: 2,
+  )
+
+- #blog-post-item(
     path: "2026-04-01-why-i-start-taking-notes/",
     title: [Why I Start Taking Notes],
     date: datetime(year: 2026, month: 4, day: 1),
