@@ -1,4 +1,5 @@
 #import "../index.typ": template, tufted
+#show: template.with(title: "Notes :: Johan Xie")
 
 #let notes-info(
   series: content,
@@ -34,8 +35,6 @@
       date-display: date-display,
     )]
 }
-
-#show: template.with(title: "Notes :: Johan Xie")
 
 #title[Notes]
 
