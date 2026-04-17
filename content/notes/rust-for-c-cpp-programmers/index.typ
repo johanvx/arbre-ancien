@@ -12,6 +12,8 @@
 This is an #link("https://microsoft.github.io/RustTraining/c-cpp-book/")[online
   book by Microsoft] to enable C/C++ programmers self-study Rust in a few days.
 
+#outline()
+
 #notes-side-info(
   updated-date: datetime(year: 2026, month: 4, day: 5),
   created-date: datetime(year: 2026, month: 3, day: 28),
