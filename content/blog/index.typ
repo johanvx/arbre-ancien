@@ -27,6 +27,12 @@
 = 2026
 
 - #blog-post-item(
+    path: "2026-05-12-capture-process-amend/",
+    title: [Capture, Process, Amend],
+    date: datetime(year: 2026, month: 5, day: 12),
+    read-time: 2,
+  )
+- #blog-post-item(
     path: "2026-04-30-start-small-build-big/",
     title: [Start Small, Build Big],
     date: datetime(year: 2026, month: 4, day: 30),
