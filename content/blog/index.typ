@@ -27,6 +27,12 @@
 = 2026
 
 - #blog-post-item(
+    path: "2026-05-20-break-the-procrastination-loop-with-physics/",
+    title: [Break the Procrastination Loop with Physics],
+    date: datetime(year: 2026, month: 5, day: 20),
+    read-time: 1,
+  )
+- #blog-post-item(
     path: "2026-05-12-capture-process-amend/",
     title: [Capture, Process, Amend],
     date: datetime(year: 2026, month: 5, day: 12),
