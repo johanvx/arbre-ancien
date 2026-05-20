@@ -1,5 +1,4 @@
-#import "../index.typ": blog-post-info, template, tufted
-#import "@preview/cmarker:0.1.8"
+#import "../index.typ": blog-post-info, template
 #show: template.with(title: "Capture, Process, Amend :: Johan Xie")
 
 #blog-post-info(

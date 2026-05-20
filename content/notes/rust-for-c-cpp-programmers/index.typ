@@ -1,7 +1,6 @@
 #import "../index.typ": (
   notes-info, notes-item, notes-side-info, template, tufted,
 )
-#import "@preview/cmarker:0.1.8"
 #show: template.with(title: "Rust for C/C++ Programmers :: Johan Xie")
 
 #let this-book-url = "https://microsoft.github.io/RustTraining/c-cpp-book/"
