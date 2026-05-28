@@ -27,6 +27,12 @@
 = 2026
 
 - #blog-post-item(
+    path: "2026-05-28-haci-2026-notes-from-an-hpc-user/",
+    title: [HACI 2026: Notes from an HPC User],
+    date: datetime(year: 2026, month: 5, day: 28),
+    read-time: 2,
+  )
+- #blog-post-item(
     path: "2026-05-20-break-the-procrastination-loop-with-physics/",
     title: [Break the Procrastination Loop with Physics],
     date: datetime(year: 2026, month: 5, day: 20),
