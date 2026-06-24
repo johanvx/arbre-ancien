@@ -22,7 +22,7 @@ me. It turned out, they were not the root cause. I even wrote a blog post about
   #link(
     "https://louiemedia.com/emotions/2019/10/14/syndrome-de-limposteur",
   )[Le syndrome de l'imposteur : pourquoi nous hante-t-il tant ?]
-  (Imposter syndrome: why does it haunt us so much?)
+  (Impostor syndrome: why does it haunt us so much?)
 ]
 
 Yesterday, I listened to a podcast in French#footnote(syndrome-de-limposteur) by
