@@ -29,13 +29,13 @@ Yesterday, I listened to a podcast in French#footnote(syndrome-de-limposteur) by
 #link("https://louiemedia.com/")[Louie Media], where psychologist Dr. Kévin
 Chassangre revealed the three pillars of the impostor syndrome:
 
-+ the _fear of deceiving your circle_ — not being competent, not
-deserving your current situation or place.
-+ _bad attribution_ — explaining your successes by external factors:
-luck, chance, the ease of a task. Never by your own ability.
-+ the _fear of being unmasked_ — the irrational conviction that one
-day, someone will discover you're not as good as they think. Irrational because,
-objectively, all the evidence of your competence is right there.
++ the _fear of deceiving your circle_ — not being competent, not deserving your
+  current situation or place.
++ _bad attribution_ — explaining your successes by external factors: luck,
+  chance, the ease of a task. Never by your own ability.
++ the _fear of being unmasked_ — the irrational conviction that one day, someone
+  will discover you're not as good as they think. Irrational because,
+  objectively, all the evidence of your competence is right there.
 
 I recognized myself in every single one.
 
