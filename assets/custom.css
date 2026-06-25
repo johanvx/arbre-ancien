@@ -17,13 +17,19 @@ p>code, li>code {
 @media (prefers-color-scheme: dark) {
   p>code, li>code {
     background-color: rgba(255,255,255,0.08); /* brighter for dark mode */
-    color: #57c3c2; /* yellow for dark mode */
+    color: #57c3c2;
   }
 }
 
 @media (prefers-color-scheme: light) {
   p>code, li>code {
     background-color: rgba(0,0,0,0.06); /* dimmer for light mode */
-    color: #12aa9c; /* green for light mode */
+    color: #12aa9c;
   }
+}
+
+/* Better line-breaking */
+p {
+  text-align: justify;
+  text-wrap: pretty;
 }
