@@ -16,13 +16,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Set up Typst
-        uses: typst-community/setup-typst@v4
+        uses: typst-community/setup-typst@v5
       - name: Make
         run: make html
       - name: Configure pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
   deploy:
@@ -37,5 +37,5 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         id: deployment
