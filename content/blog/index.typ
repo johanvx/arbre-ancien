@@ -27,6 +27,12 @@
 = 2026
 
 - #blog-post-item(
+    path: "2026-07-12-invisible-stars/",
+    title: [Invisible Stars],
+    date: datetime(year: 2026, month: 7, day: 12),
+    read-time: 1,
+  )
+- #blog-post-item(
     path: "2026-06-25-never-give-up/",
     title: [Never Give Up],
     date: datetime(year: 2026, month: 6, day: 25),
