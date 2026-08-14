@@ -27,6 +27,12 @@
 = 2026
 
 - #blog-post-item(
+    path: "2026-08-14-when-competence-does-not-suffice/",
+    title: [When Competence does not Suffice],
+    date: datetime(year: 2026, month: 8, day: 14),
+    read-time: 1,
+  )
+- #blog-post-item(
     path: "2026-07-12-invisible-stars/",
     title: [Invisible Stars],
     date: datetime(year: 2026, month: 7, day: 12),
