@@ -1,7 +1,6 @@
 #import "../index.typ": blog-post-info, template
 #show: template.with(title: "Why I Start Taking Notes :: Johan Xie")
 #set quote(block: true)
-#set par(justify: true)
 
 #blog-post-info(
   date: datetime(year: 2026, month: 4, day: 1),

@@ -30,6 +30,5 @@ p>code, li>code {
 
 /* Better line-breaking */
 p {
-  text-align: justify;
   text-wrap: pretty;
 }
